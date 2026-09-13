@@ -74,3 +74,50 @@ def test_endpoint_health():
     res = response.json()
     assert res["status"] == "healthy"
     assert res["protocolo"] == "AGENTS.md"
+
+def test_grupos_deporte_rutas_clubes():
+    """Valida la existencia y filtrado correcto de los nuevos grupos de búsqueda"""
+    # Deporte
+    res_deporte = client.get("/api/v1/lugares/cercanos?grupo=deporte&limit=50")
+    assert res_deporte.status_code == 200
+    lugares_deporte = res_deporte.json()["features"]
+    assert len(lugares_deporte) > 0, "Debe haber lugares de deporte en Vitoria"
+    nombres_deporte = [f["properties"]["nombre"] for f in lugares_deporte]
+    assert any("Mendizorrotza" in n or "Baskonia" in n or "Buesa" in n or "Ibaiondo" in n or "Gamarra" in n for n in nombres_deporte)
+
+    # Rutas
+    res_rutas = client.get("/api/v1/lugares/cercanos?grupo=rutas&limit=50")
+    assert res_rutas.status_code == 200
+    lugares_rutas = res_rutas.json()["features"]
+    assert len(lugares_rutas) > 0, "Debe haber rutas en Vitoria"
+    nombres_rutas = [f["properties"]["nombre"] for f in lugares_rutas]
+    assert any("Anillo Verde" in n or "Murales" in n or "Vasco-Navarro" in n or "Senda" in n for n in nombres_rutas)
+
+    # Clubes
+    res_clubes = client.get("/api/v1/lugares/cercanos?grupo=clubes&limit=50")
+    assert res_clubes.status_code == 200
+    lugares_clubes = res_clubes.json()["features"]
+    assert len(lugares_clubes) > 0, "Debe haber clubes/ocio nocturno en Vitoria"
+    nombres_clubes = [f["properties"]["nombre"] for f in lugares_clubes]
+    assert any("Jimmy Jazz" in n or "Helldorado" in n or "Kubik" in n or "Urban Rock" in n for n in nombres_clubes)
+
+def test_agenda_septiembre_2026_sin_actividades_pasadas():
+    """Valida que todos los eventos devueltos estén vigentes a partir del 13 de septiembre de 2026"""
+    # Ejecutar ETL para cargar eventos curados y vigentes
+    from etl.kulturklik import ejecutar_etl_kulturklik
+    ejecutar_etl_kulturklik()
+
+    response = client.get("/api/v1/eventos?limit=50")
+    assert response.status_code == 200
+    eventos = response.json()
+    assert len(eventos) > 0, "Debe haber eventos en la agenda"
+
+    hoy_str = "2026-09-13"
+    for e in eventos:
+        fecha_fin = e.get("fecha_fin")
+        fecha_ini = e.get("fecha_inicio")
+        if fecha_fin:
+            assert fecha_fin >= hoy_str, f"Evento '{e['titulo']}' terminó el {fecha_fin}, antes de {hoy_str}"
+        else:
+            assert fecha_ini >= hoy_str, f"Evento '{e['titulo']}' inició el {fecha_ini}, antes de {hoy_str}"
+

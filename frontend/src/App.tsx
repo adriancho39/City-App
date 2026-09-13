@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { MapView } from './components/MapView';
-import { FilterBar, CategoriaType } from './components/FilterBar';
+import { FilterBar, GrupoType } from './components/FilterBar';
 import { PlaceCard, Place } from './components/PlaceCard';
 import { EventList, Evento } from './components/EventList';
 import { X, Navigation, Globe, Phone, RefreshCw } from 'lucide-react';
@@ -8,7 +8,7 @@ import { X, Navigation, Globe, Phone, RefreshCw } from 'lucide-react';
 const API_BASE = '/api/v1';
 
 export const App: React.FC = () => {
-  const [categoria, setCategoria] = useState<CategoriaType>('todas');
+  const [grupo, setGrupo] = useState<GrupoType>('todos');
   const [radio, setRadio] = useState<number | null>(null);
   const [search, setSearch] = useState<string>('');
   const [tab, setTab] = useState<'lugares' | 'eventos'>('lugares');
@@ -33,7 +33,7 @@ export const App: React.FC = () => {
     };
   }, []);
 
-  // Cargar Lugares desde /api/v1/lugares/cercanos
+  // Cargar Lugares desde /api/v1/lugares/cercanos con soporte para toda la ciudad y grupos
   const cargarLugares = async () => {
     setCargando(true);
     try {
@@ -41,7 +41,7 @@ export const App: React.FC = () => {
       params.append('lat', centro.lat.toString());
       params.append('lon', centro.lon.toString());
       if (radio !== null) params.append('radio', radio.toString());
-      if (categoria !== 'todas') params.append('categoria', categoria);
+      if (grupo !== 'todos') params.append('grupo', grupo);
       if (search.trim()) params.append('search', search.trim());
       params.append('limit', '50');
 
@@ -72,11 +72,13 @@ export const App: React.FC = () => {
     }
   };
 
-  // Cargar Eventos desde /api/v1/eventos
+  // Cargar Eventos actualizados desde /api/v1/eventos
   const cargarEventos = async () => {
     try {
       const params = new URLSearchParams();
-      if (categoria !== 'todas') params.append('categoria', categoria);
+      if (grupo !== 'todos' && !['deporte', 'rutas', 'clubes'].includes(grupo)) {
+        params.append('categoria', grupo);
+      }
       params.append('limit', '50');
 
       const res = await fetch(`${API_BASE}/eventos?${params.toString()}`);
@@ -92,7 +94,7 @@ export const App: React.FC = () => {
   useEffect(() => {
     cargarLugares();
     cargarEventos();
-  }, [centro, radio, categoria, search]);
+  }, [centro, radio, grupo, search]);
 
   const handleSyncETL = async () => {
     setIsSyncing(true);
@@ -102,7 +104,7 @@ export const App: React.FC = () => {
         await cargarLugares();
         await cargarEventos();
         setIsSyncing(false);
-      }, 2000);
+      }, 2500);
     } catch (e) {
       setIsSyncing(false);
     }
@@ -124,11 +126,11 @@ export const App: React.FC = () => {
         <header className="px-5 py-3.5 bg-gradient-to-r from-vitoria-forest to-vitoria-emerald text-white flex items-center justify-between flex-shrink-0">
           <div className="flex items-center gap-2.5">
             <div className="w-8 h-8 rounded-xl bg-white/20 backdrop-blur-md flex items-center justify-center text-lg shadow-inner">
-              🏰
+              🌲
             </div>
             <div>
               <h1 className="text-base font-extrabold tracking-tight">GasteizGo</h1>
-              <p className="text-[11px] text-emerald-200 font-medium">Turismo & Ocio • Vitoria-Gasteiz</p>
+              <p className="text-[11px] text-emerald-200 font-medium">Toda Vitoria-Gasteiz • Deporte, Rutas, Ocio y Cultura</p>
             </div>
           </div>
 
@@ -137,7 +139,7 @@ export const App: React.FC = () => {
               onClick={handleSyncETL}
               disabled={isSyncing}
               className="p-2 rounded-xl bg-white/10 hover:bg-white/20 transition-colors text-white text-xs font-bold flex items-center gap-1"
-              title="Sincronizar datos con Kulturklik y Open Data"
+              title="Sincronizar datos con Kulturklik y Open Data VG"
             >
               <RefreshCw className={`w-3.5 h-3.5 ${isSyncing ? 'animate-spin text-amber-300' : ''}`} />
               <span className="hidden sm:inline">ETL</span>
@@ -147,8 +149,8 @@ export const App: React.FC = () => {
 
         {/* FilterBar Integrada */}
         <FilterBar
-          categoriaActiva={categoria}
-          onSelectCategoria={setCategoria}
+          grupoActivo={grupo}
+          onSelectGrupo={setGrupo}
           radioActivo={radio}
           onSelectRadio={setRadio}
           searchQuery={search}
@@ -165,13 +167,13 @@ export const App: React.FC = () => {
             cargando ? (
               <div className="flex flex-col items-center justify-center h-48 text-slate-400 gap-2">
                 <div className="w-6 h-6 border-2 border-emerald-600 border-t-transparent rounded-full animate-spin" />
-                <span className="text-xs font-medium">Explorando Vitoria-Gasteiz...</span>
+                <span className="text-xs font-medium">Explorando Vitoria-Gasteiz al completo...</span>
               </div>
             ) : lugares.length === 0 ? (
               <div className="flex flex-col items-center justify-center h-48 text-center text-slate-500 p-6">
                 <span className="text-3xl mb-1">🗺️</span>
-                <h4 className="font-bold text-sm">No se encontraron lugares</h4>
-                <p className="text-xs text-slate-400 mt-1">Prueba a ampliar el radio de búsqueda o cambiar de categoría.</p>
+                <h4 className="font-bold text-sm">No se encontraron lugares con este filtro</h4>
+                <p className="text-xs text-slate-400 mt-1">Prueba a seleccionar 'Todo VG' en la distancia o pulsar 'Todo Vitoria'.</p>
               </div>
             ) : (
               lugares.map((lugar) => (
@@ -241,8 +243,10 @@ export const App: React.FC = () => {
                   {lugarSeleccionado.subcategoria || lugarSeleccionado.categoria}
                 </span>
                 {lugarSeleccionado.distancia_metros !== undefined && (
-                  <span className="text-xs font-bold text-emerald-700 bg-emerald-50 px-2 py-1 rounded-lg">
-                    🚶 A {Math.round(lugarSeleccionado.distancia_metros)} m
+                  <span className="text-xs font-bold text-slate-500 bg-slate-100 px-2 py-1 rounded-lg">
+                    🚶 {lugarSeleccionado.distancia_metros >= 1000
+                      ? `${(lugarSeleccionado.distancia_metros / 1000).toFixed(1)} km`
+                      : `${Math.round(lugarSeleccionado.distancia_metros)} metros`}
                   </span>
                 )}
               </div>
@@ -251,48 +255,49 @@ export const App: React.FC = () => {
                 {lugarSeleccionado.nombre}
               </h2>
 
-              <p className="text-xs md:text-sm text-slate-600 leading-relaxed font-normal">
-                {lugarSeleccionado.descripcion || 'Punto emblemático de interés en la ciudad de Vitoria-Gasteiz.'}
-              </p>
-
-              <div className="bg-slate-50 p-4 rounded-2xl flex flex-col gap-2 text-xs text-slate-600 border border-slate-200/60">
-                <div className="flex items-center gap-2">
+              {lugarSeleccionado.direccion && (
+                <p className="text-xs font-medium text-slate-500 flex items-center gap-1.5">
                   <span>📍</span>
-                  <span className="font-semibold text-slate-800">{lugarSeleccionado.direccion || 'Vitoria-Gasteiz'}</span>
-                </div>
-                {lugarSeleccionado.telefono && (
-                  <div className="flex items-center gap-2">
-                    <Phone className="w-3.5 h-3.5 text-slate-400" />
-                    <a href={`tel:${lugarSeleccionado.telefono}`} className="text-emerald-700 font-bold hover:underline">
-                      {lugarSeleccionado.telefono}
-                    </a>
-                  </div>
-                )}
-                <div className="flex items-center gap-2 text-[11px] text-slate-400">
-                  <span>🌐</span>
-                  <span>Coordenadas EPSG:4326: {lugarSeleccionado.lon}, {lugarSeleccionado.lat}</span>
-                </div>
-              </div>
+                  <span>{lugarSeleccionado.direccion}</span>
+                </p>
+              )}
 
-              <div className="flex gap-2.5 pt-2">
+              {lugarSeleccionado.descripcion && (
+                <p className="text-sm text-slate-600 leading-relaxed pt-1">
+                  {lugarSeleccionado.descripcion}
+                </p>
+              )}
+
+              <div className="flex flex-wrap gap-2 pt-4 border-t border-slate-100 mt-2">
                 <a
                   href={`https://www.google.com/maps/dir/?api=1&destination=${lugarSeleccionado.lat},${lugarSeleccionado.lon}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-1 py-3 px-4 bg-vitoria-forest hover:bg-vitoria-emerald text-white rounded-xl text-xs font-bold flex items-center justify-center gap-2 transition-colors shadow-sm"
+                  className="flex-1 py-3 px-4 rounded-xl bg-vitoria-forest hover:bg-emerald-800 text-white font-bold text-xs flex items-center justify-center gap-2 shadow-sm transition-all"
                 >
                   <Navigation className="w-4 h-4" />
-                  <span>Cómo llegar</span>
+                  <span>Cómo llegar (GPS)</span>
                 </a>
+
                 {lugarSeleccionado.web && (
                   <a
                     href={lugarSeleccionado.web}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="py-3 px-4 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-xl text-xs font-bold flex items-center justify-center gap-2 transition-colors"
+                    className="py-3 px-4 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-xs flex items-center justify-center gap-2 transition-all"
                   >
                     <Globe className="w-4 h-4" />
                     <span>Web oficial</span>
+                  </a>
+                )}
+
+                {lugarSeleccionado.telefono && (
+                  <a
+                    href={`tel:${lugarSeleccionado.telefono}`}
+                    className="py-3 px-4 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-xs flex items-center justify-center gap-2 transition-all"
+                  >
+                    <Phone className="w-4 h-4" />
+                    <span>Llamar</span>
                   </a>
                 )}
               </div>

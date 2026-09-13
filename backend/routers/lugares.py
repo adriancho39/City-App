@@ -11,6 +11,8 @@ def obtener_lugares_cercanos(
     lon: float = Query(CENTER_VITORIA["lon"], description="Longitud del centro de búsqueda"),
     radio: Optional[float] = Query(None, description="Radio de búsqueda en metros (ej. 500, 1000, 3000)"),
     categoria: Optional[str] = Query(None, description="Filtro por categoría canónica"),
+    subcategoria: Optional[str] = Query(None, description="Filtro por subcategoría"),
+    grupo: Optional[str] = Query(None, description="Filtro por grupo temático (deporte, rutas, clubes, gastronomia, etc.)"),
     search: Optional[str] = Query(None, description="Término de búsqueda léxica"),
     limit: int = Query(50, ge=1, le=50, description="Paginación máxima de 50 elementos según AGENTS.md"),
     offset: int = Query(0, ge=0)
@@ -24,6 +26,8 @@ def obtener_lugares_cercanos(
         center_lat=lat,
         radio_metros=radio,
         categoria=categoria,
+        subcategoria=subcategoria,
+        grupo=grupo,
         search=search,
         limit=limit,
         offset=offset

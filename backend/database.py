@@ -166,6 +166,8 @@ class GeoDatabase:
         center_lat: float = CENTER_VITORIA['lat'],
         radio_metros: Optional[float] = None,
         categoria: Optional[str] = None,
+        subcategoria: Optional[str] = None,
+        grupo: Optional[str] = None,
         search: Optional[str] = None,
         limit: int = 50,
         offset: int = 0
@@ -173,6 +175,7 @@ class GeoDatabase:
         """
         Consulta espacial de lugares cercanos con ordenación por distancia geodésica.
         Respuestas paginadas con límite máximo de 50 elementos según AGENTS.md.
+        Admite filtrado por categoría canónica, subcategoría y grupos temáticos (deporte, rutas, clubes, etc.).
         """
         limit = min(limit, 50)
         items: List[LugarOut] = []
@@ -181,11 +184,61 @@ class GeoDatabase:
             if categoria and categoria != 'todos' and lugar.categoria != categoria:
                 continue
 
+            if subcategoria and subcategoria != 'todos':
+                if not lugar.subcategoria or subcategoria.lower() not in lugar.subcategoria.lower():
+                    continue
+
+            if grupo and grupo != 'todos':
+                g = grupo.lower()
+                l_sub = (lugar.subcategoria or '').lower()
+                l_nom = lugar.nombre.lower()
+                l_cat = lugar.categoria.lower()
+
+                if g == 'deporte':
+                    match = (
+                        l_sub in ['deporte', 'polideportivo', 'estadio', 'fronton', 'atletismo', 'piscinas_olimpicas', 'complejo_deportivo']
+                        or any(w in l_sub for w in ['deport', 'kirol', 'piscina', 'padel', 'gym'])
+                        or any(w in l_nom for w in ['buesa arena', 'bakh', 'mendizorrotza', 'estadio', 'polideportivo', 'fronton', 'cívico', 'civico'])
+                    )
+                    if not match:
+                        continue
+                elif g in ['rutas', 'ruta']:
+                    match = (
+                        'ruta' in l_sub or 'sendero' in l_sub or 'via_verde' in l_sub or 'anillo_verde' in l_sub
+                        or any(w in l_nom for w in ['ruta', 'senda', 'anillo verde', 'mural', 'vasco-navarro', 'vuelta'])
+                    )
+                    if not match:
+                        continue
+                elif g in ['clubes', 'club', 'noche']:
+                    match = (
+                        'club' in l_sub or 'musica_en_vivo' in l_sub or 'discoteca' in l_sub or 'sala_conciertos' in l_sub or 'pub' in l_sub
+                        or any(w in l_nom for w in ['jimmy jazz', 'helldorado', 'kubik', 'urban rock', 'glow', 'moon'])
+                    )
+                    if not match:
+                        continue
+                elif g in ['gastronomia', 'restaurantes']:
+                    if l_cat != 'gastronomia':
+                        continue
+                elif g in ['patrimonio', 'monumentos']:
+                    if l_cat != 'patrimonio':
+                        continue
+                elif g in ['naturaleza', 'parques']:
+                    if l_cat != 'naturaleza':
+                        continue
+                elif g in ['cultura', 'museos']:
+                    if l_cat != 'cultura':
+                        continue
+                elif g in ['comercio', 'tiendas']:
+                    if l_cat != 'comercio':
+                        continue
+
             if search:
                 s_lower = search.lower()
                 n_match = s_lower in lugar.nombre.lower()
                 d_match = lugar.descripcion and s_lower in lugar.descripcion.lower()
-                if not (n_match or d_match):
+                c_match = lugar.categoria and s_lower in lugar.categoria.lower()
+                sub_match = lugar.subcategoria and s_lower in lugar.subcategoria.lower()
+                if not (n_match or d_match or c_match or sub_match):
                     continue
 
             dist = haversine_distance_meters(center_lon, center_lat, lugar.lon, lugar.lat)
@@ -213,6 +266,9 @@ class GeoDatabase:
         offset: int = 0
     ) -> Tuple[List[EventoOut], int]:
         """Lista eventos culturales a partir de la fecha del sistema ordenada por fecha y cercanía"""
+        if fecha_min is None:
+            fecha_min = date.today()
+
         items: List[EventoOut] = []
         for evento in self.eventos.values():
             if fecha_min:
@@ -229,8 +285,14 @@ class GeoDatabase:
             evento_copy.distancia_metros = dist
             items.append(evento_copy)
 
-        # Ordenar por fecha_inicio ascendente, y luego por cercanía
-        items.sort(key=lambda x: (x.fecha_inicio, x.distancia_metros or 0.0))
+        # Ordenar priorizando eventos que inician hoy o en los próximos días de septiembre
+        hoy = date.today()
+        def sort_evento(x: EventoOut):
+            if x.fecha_inicio >= hoy:
+                return (0, x.fecha_inicio, x.distancia_metros or 0.0)
+            return (1, x.fecha_fin or hoy, x.distancia_metros or 0.0)
+
+        items.sort(key=sort_evento)
         total = len(items)
         paginados = items[offset:offset + limit]
 

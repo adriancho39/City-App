@@ -23,10 +23,13 @@ def ejecutar_etl_opendata() -> Dict[str, Any]:
     print("[ETL Open Data VG] Iniciando ingesta municipal y reproyección EPSG:25830...")
 
     capas_municipales = [
-        {"id": "131", "nombre": "Monumentos", "cat_default": "patrimonio"},
-        {"id": "64", "nombre": "Parques y jardines", "cat_default": "naturaleza"},
-        {"id": "130", "nombre": "Restaurantes", "cat_default": "gastronomia"},
-        {"id": "172", "nombre": "Museos", "cat_default": "cultura"},
+        {"id": "131", "nombre": "Monumentos", "cat_default": "patrimonio", "subcat_default": "monumento"},
+        {"id": "64", "nombre": "Parques y jardines", "cat_default": "naturaleza", "subcat_default": "parque"},
+        {"id": "130", "nombre": "Restaurantes", "cat_default": "gastronomia", "subcat_default": "restaurante"},
+        {"id": "172", "nombre": "Museos", "cat_default": "cultura", "subcat_default": "museo"},
+        {"id": "59", "nombre": "Centros Cívicos", "cat_default": "ocio", "subcat_default": "deporte"},
+        {"id": "75", "nombre": "Frontones y Deporte", "cat_default": "ocio", "subcat_default": "deporte"},
+        {"id": "95", "nombre": "Ruta de los Murales", "cat_default": "cultura", "subcat_default": "ruta"},
     ]
 
     total_procesados = 0

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Calendar, Clock, MapPin, ExternalLink } from 'lucide-react';
+import { Calendar, Clock, MapPin, ExternalLink, Sparkles } from 'lucide-react';
 
 export interface Evento {
   id: string;
@@ -26,6 +26,31 @@ interface EventListProps {
   eventoActivoId?: string;
 }
 
+function formatFechaBadge(fechaIni: string, fechaFin?: string): { texto: string; color: string } {
+  const hoyStr = '2026-09-13';
+
+  if (fechaIni === hoyStr) {
+    return { texto: '🔥 Hoy, 13 Sept', color: 'bg-rose-50 text-rose-700 border-rose-200' };
+  }
+  if (fechaIni === '2026-09-14') {
+    return { texto: 'Mañana, 14 Sept', color: 'bg-amber-50 text-amber-700 border-amber-200' };
+  }
+  if (fechaIni < hoyStr && fechaFin && fechaFin >= hoyStr) {
+    const finObj = new Date(fechaFin);
+    const finStr = isNaN(finObj.getTime())
+      ? fechaFin
+      : finObj.toLocaleDateString('es-ES', { day: 'numeric', month: 'short' });
+    return { texto: `En curso • Hasta ${finStr}`, color: 'bg-emerald-50 text-emerald-700 border-emerald-200' };
+  }
+
+  const iniObj = new Date(fechaIni);
+  const iniStr = isNaN(iniObj.getTime())
+    ? fechaIni
+    : iniObj.toLocaleDateString('es-ES', { day: 'numeric', month: 'short' });
+
+  return { texto: iniStr, color: 'bg-purple-50 text-purple-700 border-purple-200' };
+}
+
 export const EventList: React.FC<EventListProps> = ({
   eventos,
   onSelectEvento,
@@ -37,7 +62,7 @@ export const EventList: React.FC<EventListProps> = ({
         <div className="text-4xl mb-2">🎭</div>
         <h4 className="font-bold text-sm text-slate-700">Sin eventos activos</h4>
         <p className="text-xs text-slate-400 mt-1 max-w-xs">
-          No hay eventos programados en este radio de proximidad o categoría hoy.
+          No hay eventos programados en este radio de proximidad o categoría a partir de hoy.
         </p>
       </div>
     );
@@ -45,12 +70,22 @@ export const EventList: React.FC<EventListProps> = ({
 
   return (
     <div className="flex flex-col gap-3 p-4">
+      {/* Banner Informativo de Fecha Actual */}
+      <div className="bg-purple-50/80 border border-purple-200/80 rounded-2xl p-3 flex items-center justify-between text-xs">
+        <div className="flex items-center gap-2">
+          <Sparkles className="w-4 h-4 text-purple-600 flex-shrink-0" />
+          <span className="font-semibold text-purple-900">
+            Agenda Cultural en Vitoria-Gasteiz: <span className="font-extrabold">Septiembre / Octubre 2026</span>
+          </span>
+        </div>
+        <span className="text-[10px] font-bold text-purple-700 bg-purple-100 px-2 py-0.5 rounded-full">
+          {eventos.length} actos
+        </span>
+      </div>
+
       {eventos.map((ev) => {
         const isActive = ev.id === eventoActivoId;
-        const fechaFormateada = new Date(ev.fecha_inicio).toLocaleDateString('es-ES', {
-          day: 'numeric',
-          month: 'short',
-        });
+        const badge = formatFechaBadge(ev.fecha_inicio, ev.fecha_fin);
 
         return (
           <article
@@ -63,12 +98,12 @@ export const EventList: React.FC<EventListProps> = ({
             }`}
           >
             <div className="flex items-start justify-between gap-2">
-              <div className="flex items-center gap-1.5 text-xs font-bold text-purple-700 bg-purple-50 px-2 py-0.5 rounded-full border border-purple-200">
+              <div className={`flex items-center gap-1.5 text-xs font-bold px-2 py-0.5 rounded-full border ${badge.color}`}>
                 <Calendar className="w-3 h-3" />
-                <span>{fechaFormateada}</span>
+                <span>{badge.texto}</span>
                 {ev.hora && (
                   <>
-                    <span className="text-purple-400">•</span>
+                    <span className="opacity-40">•</span>
                     <Clock className="w-3 h-3" />
                     <span>{ev.hora}</span>
                   </>

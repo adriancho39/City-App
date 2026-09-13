@@ -1,4 +1,4 @@
-const CACHE_NAME = 'gasteizgo-v1';
+const CACHE_NAME = 'gasteizgo-v2';
 const STATIC_ASSETS = [
   '/',
   '/index.html',

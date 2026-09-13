@@ -10,11 +10,14 @@ router = APIRouter(prefix="/eventos", tags=["Eventos"])
 @router.get("", response_model=List[EventoOut])
 def listar_eventos(
     categoria: Optional[str] = Query(None),
+    fecha_min: Optional[str] = Query(None, description="Fecha mínima (YYYY-MM-DD), por defecto hoy"),
     limit: int = Query(50, ge=1, le=50, description="Límite máximo de 50 según AGENTS.md"),
     offset: int = Query(0, ge=0)
 ):
     """Lista eventos culturales de Vitoria-Gasteiz desde la fecha actual"""
-    eventos, _ = db.listar_eventos(categoria=categoria, limit=limit, offset=offset)
+    from datetime import date
+    f_date = date.fromisoformat(fecha_min) if fecha_min else None
+    eventos, _ = db.listar_eventos(categoria=categoria, fecha_min=f_date, limit=limit, offset=offset)
     return eventos
 
 @router.get("/cercanos", response_model=GeoJSONFeatureCollection)
@@ -22,14 +25,18 @@ def obtener_eventos_cercanos(
     lat: float = Query(CENTER_VITORIA["lat"]),
     lon: float = Query(CENTER_VITORIA["lon"]),
     categoria: Optional[str] = Query(None),
+    fecha_min: Optional[str] = Query(None),
     limit: int = Query(50, ge=1, le=50),
     offset: int = Query(0, ge=0)
 ):
     """Devuelve eventos en formato GeoJSON RFC 7946 [lon, lat]"""
+    from datetime import date
+    f_date = date.fromisoformat(fecha_min) if fecha_min else None
     eventos, total = db.listar_eventos(
         center_lon=lon,
         center_lat=lat,
         categoria=categoria,
+        fecha_min=f_date,
         limit=limit,
         offset=offset
     )

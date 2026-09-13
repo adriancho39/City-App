@@ -24,16 +24,36 @@ interface PlaceCardProps {
 }
 
 const CATEGORIA_BADGES: Record<string, { bg: string; text: string; icon: string }> = {
+  deporte: { bg: 'bg-sky-50 border-sky-200', text: 'text-sky-700', icon: '⚽' },
+  ruta: { bg: 'bg-lime-50 border-lime-200', text: 'text-lime-800', icon: '🥾' },
+  club: { bg: 'bg-purple-50 border-purple-200', text: 'text-purple-700', icon: '🌙' },
   patrimonio: { bg: 'bg-amber-50 border-amber-200', text: 'text-amber-700', icon: '🏛️' },
   naturaleza: { bg: 'bg-emerald-50 border-emerald-200', text: 'text-emerald-700', icon: '🌳' },
-  cultura: { bg: 'bg-purple-50 border-purple-200', text: 'text-purple-700', icon: '🎭' },
+  cultura: { bg: 'bg-indigo-50 border-indigo-200', text: 'text-indigo-700', icon: '🎭' },
   gastronomia: { bg: 'bg-rose-50 border-rose-200', text: 'text-rose-700', icon: '🍷' },
   ocio: { bg: 'bg-blue-50 border-blue-200', text: 'text-blue-700', icon: '🎡' },
-  comercio: { bg: 'bg-cyan-50 border-cyan-200', text: 'text-cyan-700', icon: '🛍️' },
+  comercio: { bg: 'bg-teal-50 border-teal-200', text: 'text-teal-700', icon: '🛍️' },
 };
 
+function resolverBadge(place: Place): { bg: string; text: string; icon: string } {
+  const sub = (place.subcategoria || '').toLowerCase();
+  const cat = (place.categoria || 'cultura').toLowerCase();
+
+  if (sub.includes('deport') || sub.includes('polideport') || sub.includes('estadio') || sub.includes('fronton') || sub.includes('piscina') || sub.includes('kirol')) {
+    return CATEGORIA_BADGES.deporte;
+  }
+  if (sub.includes('ruta') || sub.includes('sendero') || sub.includes('via_verde') || sub.includes('anillo')) {
+    return CATEGORIA_BADGES.ruta;
+  }
+  if (sub.includes('club') || sub.includes('discoteca') || sub.includes('pub') || sub.includes('conciert')) {
+    return CATEGORIA_BADGES.club;
+  }
+
+  return CATEGORIA_BADGES[cat] || CATEGORIA_BADGES.cultura;
+}
+
 export const PlaceCard: React.FC<PlaceCardProps> = ({ place, isActive, onSelect }) => {
-  const badge = CATEGORIA_BADGES[place.categoria.toLowerCase()] || CATEGORIA_BADGES.cultura;
+  const badge = resolverBadge(place);
   const distFormatted = place.distancia_metros !== undefined
     ? place.distancia_metros >= 1000
       ? `${(place.distancia_metros / 1000).toFixed(1)} km`

@@ -10,7 +10,13 @@
   "features": [
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-2.6726, 42.8497] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.6726,
+          42.8497
+        ]
+      },
       "properties": {
         "external_id": "seed-01",
         "nombre": "Catedral de Santa María (Catedral Vieja)",
@@ -25,7 +31,13 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-2.6715, 42.8501] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.6715,
+          42.8501
+        ]
+      },
       "properties": {
         "external_id": "seed-02",
         "nombre": "Muralla Medieval y Torreones",
@@ -39,7 +51,13 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-2.6716, 42.8467] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.6716,
+          42.8467
+        ]
+      },
       "properties": {
         "external_id": "seed-03",
         "nombre": "Plaza de la Virgen Blanca",
@@ -52,7 +70,13 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-2.6738, 42.8475] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.6738,
+          42.8475
+        ]
+      },
       "properties": {
         "external_id": "seed-04",
         "nombre": "Palacio de Montehermoso",
@@ -65,7 +89,13 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-2.6718, 42.8480] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.6718,
+          42.848
+        ]
+      },
       "properties": {
         "external_id": "seed-05",
         "nombre": "Palacio Villa Suso y Plaza del Machete",
@@ -78,7 +108,13 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-2.6710, 42.8472] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.671,
+          42.8472
+        ]
+      },
       "properties": {
         "external_id": "seed-06",
         "nombre": "Los Arquillos de Olaguíbel",
@@ -91,7 +127,13 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-2.6717, 42.8485] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.6717,
+          42.8485
+        ]
+      },
       "properties": {
         "external_id": "seed-07",
         "nombre": "Casa del Cordón",
@@ -104,7 +146,13 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-2.6728, 42.8491] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.6728,
+          42.8491
+        ]
+      },
       "properties": {
         "external_id": "seed-08",
         "nombre": "Palacio Escoriaza-Esquivel",
@@ -117,7 +165,13 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-2.6450, 42.8550] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.645,
+          42.855
+        ]
+      },
       "properties": {
         "external_id": "seed-09",
         "nombre": "Humedales de Salburua y Centro Ataria",
@@ -131,7 +185,13 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-2.6735, 42.8450] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.6735,
+          42.845
+        ]
+      },
       "properties": {
         "external_id": "seed-10",
         "nombre": "Parque de La Florida",
@@ -144,7 +204,13 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-2.6620, 42.8270] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.662,
+          42.827
+        ]
+      },
       "properties": {
         "external_id": "seed-11",
         "nombre": "Jardín Botánico de Olarizu",
@@ -157,7 +223,13 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-2.7010, 42.8330] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.701,
+          42.833
+        ]
+      },
       "properties": {
         "external_id": "seed-12",
         "nombre": "Bosque de Armentia",
@@ -170,7 +242,13 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-2.6795, 42.8410] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.6795,
+          42.841
+        ]
+      },
       "properties": {
         "external_id": "seed-13",
         "nombre": "Parque del Prado",
@@ -183,7 +261,13 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-2.6675, 42.8475] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.6675,
+          42.8475
+        ]
+      },
       "properties": {
         "external_id": "seed-14",
         "nombre": "Artium - Museo Vasco de Arte Contemporáneo",
@@ -198,7 +282,13 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-2.6705, 42.8493] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.6705,
+          42.8493
+        ]
+      },
       "properties": {
         "external_id": "seed-15",
         "nombre": "Bibat: Museo de Arqueología y Naipes Fournier",
@@ -212,7 +302,13 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-2.6798, 42.8415] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.6798,
+          42.8415
+        ]
+      },
       "properties": {
         "external_id": "seed-16",
         "nombre": "Museo de Bellas Artes de Álava",
@@ -225,7 +321,13 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-2.6706, 42.8465] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.6706,
+          42.8465
+        ]
+      },
       "properties": {
         "external_id": "seed-17",
         "nombre": "Teatro Principal Antzokia",
@@ -239,7 +341,13 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-2.6712, 42.8488] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.6712,
+          42.8488
+        ]
+      },
       "properties": {
         "external_id": "seed-18",
         "nombre": "Ruta de Pintxos de la Almendra Medieval (Kutxi y Zapa)",
@@ -252,7 +360,13 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-2.6690, 42.8460] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.669,
+          42.846
+        ]
+      },
       "properties": {
         "external_id": "seed-19",
         "nombre": "Mercado de Abastos y Gastro-Gune",
@@ -265,7 +379,13 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-2.6730, 42.8502] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.673,
+          42.8502
+        ]
+      },
       "properties": {
         "external_id": "seed-20",
         "nombre": "Restaurante El Portalón",
@@ -280,7 +400,13 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-2.6728, 42.8460] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.6728,
+          42.846
+        ]
+      },
       "properties": {
         "external_id": "seed-21",
         "nombre": "Sagartoki (Bar de Pintxos de Autor)",
@@ -295,7 +421,13 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-2.6788, 42.8445] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.6788,
+          42.8445
+        ]
+      },
       "properties": {
         "external_id": "seed-22",
         "nombre": "Restaurante Zaldiaran",
@@ -309,7 +441,13 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-2.6828, 42.8512] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.6828,
+          42.8512
+        ]
+      },
       "properties": {
         "external_id": "seed-23",
         "nombre": "Palacio de Congresos Europa",
@@ -322,7 +460,13 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-2.6700, 42.8455] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.67,
+          42.8455
+        ]
+      },
       "properties": {
         "external_id": "seed-24",
         "nombre": "Eje Comercial Calle Dato y San Prudencio",
@@ -331,6 +475,720 @@
         "descripcion": "Arteria peatonal principal del ensanche con comercios emblemáticos, confiterías artesanales y terrazas.",
         "direccion": "Calle Eduardo Dato",
         "imagen_url": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&auto=format&fit=crop"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.6393,
+          42.8624
+        ]
+      },
+      "properties": {
+        "external_id": "sport-01",
+        "nombre": "Fernando Buesa Arena (Pabellón Baskonia)",
+        "categoria": "ocio",
+        "subcategoria": "deporte",
+        "descripcion": "Estadio multiusos con capacidad para más de 15.000 espectadores, sede histórica del Saski Baskonia y grandes eventos deportivos.",
+        "direccion": "Carretera de Zurbano, s/n (Salburua)",
+        "imagen_url": "https://images.unsplash.com/photo-1546519638-68e109498ffc?w=800&auto=format&fit=crop",
+        "web": "https://www.baskonia.com",
+        "telefono": "+34 945 27 34 00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.639,
+          42.864
+        ]
+      },
+      "properties": {
+        "external_id": "sport-02",
+        "nombre": "BAKH - Baskonia Alavés Kirol Hiria",
+        "categoria": "ocio",
+        "subcategoria": "deporte",
+        "descripcion": "Ciudad deportiva de referencia en Euskadi: piscinas cubiertas y de verano, pistas de pádel, tenis, hielo, spa wellness y gimnasio.",
+        "direccion": "Paseo de la Biosfera, 2 (Salburua)",
+        "imagen_url": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&auto=format&fit=crop",
+        "web": "https://www.bakh.es",
+        "telefono": "+34 902 44 01 10"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.6852,
+          42.8368
+        ]
+      },
+      "properties": {
+        "external_id": "sport-03",
+        "nombre": "Complejo Deportivo de Mendizorrotza",
+        "categoria": "ocio",
+        "subcategoria": "deporte",
+        "descripcion": "Instalación deportiva municipal estrella de Vitoria con piscinas olímpicas, zona verde de solarium, frontones cubiertos, canchas de tenis y atletismo.",
+        "direccion": "Plaza Amadeo García de Salazar, 1",
+        "imagen_url": "https://images.unsplash.com/photo-1576610616656-d3aa5d1f4534?w=800&auto=format&fit=crop",
+        "web": "https://www.vitoria-gasteiz.org/deporte",
+        "telefono": "+34 945 16 10 68"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.6865,
+          42.8365
+        ]
+      },
+      "properties": {
+        "external_id": "sport-04",
+        "nombre": "Estadio de Mendizorroza (Deportivo Alavés)",
+        "categoria": "ocio",
+        "subcategoria": "deporte",
+        "descripcion": "Estadio centenario del Deportivo Alavés inaugurado en 1924, tercer estadio más antiguo de LaLiga en España.",
+        "direccion": "Paseo Cervantes, s/n",
+        "imagen_url": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?w=800&auto=format&fit=crop",
+        "web": "https://www.deportivoalaves.com",
+        "telefono": "+34 945 13 10 10"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.685,
+          42.8375
+        ]
+      },
+      "properties": {
+        "external_id": "sport-05",
+        "nombre": "Frontón Ogueta de Vitoria",
+        "categoria": "ocio",
+        "subcategoria": "deporte",
+        "descripcion": "Catedral de la pelota vasca profesional en Vitoria-Gasteiz, sede del Campeonato Manomanista y del Cuatro y Medio.",
+        "direccion": "Plaza Amadeo García de Salazar, s/n",
+        "imagen_url": "https://images.unsplash.com/photo-1517649763962-0c623266ddc0?w=800&auto=format&fit=crop",
+        "web": "https://www.vitoria-gasteiz.org/deporte",
+        "telefono": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.6565,
+          42.875
+        ]
+      },
+      "properties": {
+        "external_id": "sport-06",
+        "nombre": "Parque y Piscinas de Gamarra",
+        "categoria": "ocio",
+        "subcategoria": "deporte",
+        "descripcion": "Macrocomplejo deportivo y de ocio familiar en el norte de Vitoria con piscina olímpica con olas, toboganes, campos de rugby y atletismo.",
+        "direccion": "Calle Barratxi, 39 (Gamarra Mayor)",
+        "imagen_url": "https://images.unsplash.com/photo-1519315901367-f34ff9154487?w=800&auto=format&fit=crop",
+        "web": "https://www.vitoria-gasteiz.org/gamarra",
+        "telefono": "+34 945 16 15 28"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.6908,
+          42.8592
+        ]
+      },
+      "properties": {
+        "external_id": "sport-07",
+        "nombre": "Centro Cívico Ibaiondo (Piscina y Rocódromo)",
+        "categoria": "ocio",
+        "subcategoria": "deporte",
+        "descripcion": "Centro polideportivo de última generación en Lakua con piscina recreativa con cascadas, rocódromo cubierto de competición y polideportivo.",
+        "direccion": "Calle Donostia-San Sebastián, 1 (Lakua)",
+        "imagen_url": "https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?w=800&auto=format&fit=crop",
+        "web": "https://www.vitoria-gasteiz.org/ibaiondo",
+        "telefono": "+34 945 16 18 13"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.7015,
+          42.8398
+        ]
+      },
+      "properties": {
+        "external_id": "sport-08",
+        "nombre": "Centro Cívico Zabalgana",
+        "categoria": "ocio",
+        "subcategoria": "deporte",
+        "descripcion": "Espacio deportivo y sociocultural en Zabalgana con piscina cubierta climatizada, gimnasio de musculación, pista polideportiva y rocódromo infantil.",
+        "direccion": "Calle Juan Gris, 2 (Zabalgana)",
+        "imagen_url": "https://images.unsplash.com/photo-1540497077202-7c8a3999166f?w=800&auto=format&fit=crop",
+        "web": "https://www.vitoria-gasteiz.org/zabalgana",
+        "telefono": "+34 945 16 16 30"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.6475,
+          42.8455
+        ]
+      },
+      "properties": {
+        "external_id": "sport-09",
+        "nombre": "Centro Cívico Salburua",
+        "categoria": "ocio",
+        "subcategoria": "deporte",
+        "descripcion": "Edificio bioclimático en Salburua dotado de piscina deportiva, pista polideportiva reglamentaria, gimnasio y biblioteca municipal.",
+        "direccion": "Avenida de Bratislava, 2 (Salburua)",
+        "imagen_url": "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=800&auto=format&fit=crop",
+        "web": "https://www.vitoria-gasteiz.org/salburua",
+        "telefono": "+34 945 16 16 34"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.659,
+          42.846
+        ]
+      },
+      "properties": {
+        "external_id": "sport-10",
+        "nombre": "Centro Cívico Judimendi",
+        "categoria": "ocio",
+        "subcategoria": "deporte",
+        "descripcion": "Instalaciones polideportivas municipales con piscina cubierta, pistas de squash, pádel y rocódromo en el barrio de Judimendi.",
+        "direccion": "Avenida de Judimendi, 26",
+        "imagen_url": "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=800&auto=format&fit=crop",
+        "web": "https://www.vitoria-gasteiz.org/judimendi",
+        "telefono": "+34 945 16 17 40"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.6416,
+          42.8548
+        ]
+      },
+      "properties": {
+        "external_id": "route-01",
+        "nombre": "Vuelta al Anillo Verde de Vitoria (Ruta 30 km)",
+        "categoria": "naturaleza",
+        "subcategoria": "ruta",
+        "descripcion": "Itinerario circular circular de 30,8 km balizado que une los parques de Salburua, Zadorra, Zabalgana, Armentia y Olarizu en un corredor ecológico continuo.",
+        "direccion": "Inicio en Ataria / Anillo Verde",
+        "imagen_url": "https://images.unsplash.com/photo-1551632811-561732d1e306?w=800&auto=format&fit=crop",
+        "web": "https://www.vitoria-gasteiz.org/anilloverde",
+        "telefono": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.6715,
+          42.849
+        ]
+      },
+      "properties": {
+        "external_id": "route-02",
+        "nombre": "Ruta de los Murales de Vitoria-Gasteiz (IMVG)",
+        "categoria": "cultura",
+        "subcategoria": "ruta",
+        "descripcion": "Galería pública de muralismo al aire libre por el Casco Histórico y barrios con obras emblemáticas como 'Al Hilo del Tiempo' y 'La Luz de la Esperanza'.",
+        "direccion": "Cantón de Santa Ana / Casco Medieval",
+        "imagen_url": "https://images.unsplash.com/photo-1561055657-b9e0bf0fa360?w=800&auto=format&fit=crop",
+        "web": "https://www.muralismopublico.com",
+        "telefono": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.664,
+          42.839
+        ]
+      },
+      "properties": {
+        "external_id": "route-03",
+        "nombre": "Vía Verde del Vasco-Navarro (Tramo Urbano)",
+        "categoria": "naturaleza",
+        "subcategoria": "ruta",
+        "descripcion": "Recorrido peatonal y cicloturista recuperado sobre el antiguo ferrocarril de vía estrecha que cruza Vitoria conectando el centro con Olarizu.",
+        "direccion": "Calle Los Herrán - Puente de las Trianas",
+        "imagen_url": "https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?w=800&auto=format&fit=crop",
+        "web": "https://viasverdes.com",
+        "telefono": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.678,
+          42.843
+        ]
+      },
+      "properties": {
+        "external_id": "route-04",
+        "nombre": "Paseo de la Senda y Palacios del Ensanche Sur",
+        "categoria": "patrimonio",
+        "subcategoria": "ruta",
+        "descripcion": "Paseo señorial flanqueado por plátanos centenarios, palacetes nobiliarios, Ajuria Enea, Zulueta y el Museo de Armería que conduce a Armentia.",
+        "direccion": "Paseo de la Senda",
+        "imagen_url": "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=800&auto=format&fit=crop",
+        "web": "https://www.vitoria-gasteiz.org/turismo",
+        "telefono": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.678,
+          42.872
+        ]
+      },
+      "properties": {
+        "external_id": "route-05",
+        "nombre": "Senda Fluvial del Río Zadorra",
+        "categoria": "naturaleza",
+        "subcategoria": "ruta",
+        "descripcion": "Sendero fluvial acondicionado entre Abetxuko y Gamarra con pasarelas de madera, vegetación de ribera y zonas de recreo ornitológico.",
+        "direccion": "Parque del Zadorra (Abetxuko)",
+        "imagen_url": "https://images.unsplash.com/photo-1448375240586-882707db888b?w=800&auto=format&fit=crop",
+        "web": "https://www.vitoria-gasteiz.org/anilloverde",
+        "telefono": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.671,
+          42.8492
+        ]
+      },
+      "properties": {
+        "external_id": "club-01",
+        "nombre": "Jimmy Jazz Gasteiz",
+        "categoria": "ocio",
+        "subcategoria": "club",
+        "descripcion": "Sala de conciertos mítica de Vitoria con programación de rock, punk, electrónica, hip-hop y directos estatales e internacionales.",
+        "direccion": "Calle Coronación de la Virgen Blanca, 4",
+        "imagen_url": "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=800&auto=format&fit=crop",
+        "web": "https://jimmyjazzgasteiz.com",
+        "telefono": "+34 945 23 35 18"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.6612,
+          42.8495
+        ]
+      },
+      "properties": {
+        "external_id": "club-02",
+        "nombre": "Sala Helldorado (Rock & Roll Club)",
+        "categoria": "ocio",
+        "subcategoria": "club",
+        "descripcion": "El club sónico más premiado del norte: sala de directos de culto con ambiente inigualable de garage, soul, blues y rock independiente.",
+        "direccion": "Calle Venta de la Estrella, 6",
+        "imagen_url": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=800&auto=format&fit=crop",
+        "web": "https://helldorado.net",
+        "telefono": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.6708,
+          42.8478
+        ]
+      },
+      "properties": {
+        "external_id": "club-03",
+        "nombre": "Kubik Club Vitoria",
+        "categoria": "ocio",
+        "subcategoria": "club",
+        "descripcion": "Discoteca y club de referencia en el centro de Vitoria con tres ambientes, sesiones de DJ, coctelería y eventos nocturnos hasta el amanecer.",
+        "direccion": "Calle General Álava, 5",
+        "imagen_url": "https://images.unsplash.com/photo-1566737236500-c8ac43014a67?w=800&auto=format&fit=crop",
+        "web": "https://kubikvitoria.com",
+        "telefono": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.658,
+          42.863
+        ]
+      },
+      "properties": {
+        "external_id": "club-04",
+        "nombre": "Urban Rock Concept",
+        "categoria": "ocio",
+        "subcategoria": "club",
+        "descripcion": "Espacio musical alternativo en Portal de Gamarra con acústica cuidada, conciertos de hard rock y heavy metal y tributos en directo.",
+        "direccion": "Portal de Gamarra, 1",
+        "imagen_url": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=800&auto=format&fit=crop",
+        "web": "https://urbanrockconcept.com",
+        "telefono": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.674,
+          42.845
+        ]
+      },
+      "properties": {
+        "external_id": "club-05",
+        "nombre": "The Man in the Moon",
+        "categoria": "ocio",
+        "subcategoria": "club",
+        "descripcion": "Auténtico pub irlandés con amplia selección de cervezas de importación artesanas, retransmisiones deportivas de rugby/fútbol y conciertos acústicos.",
+        "direccion": "Calle Manuel Iradier, 7",
+        "imagen_url": "https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=800&auto=format&fit=crop",
+        "web": null,
+        "telefono": "+34 945 14 00 24"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.6715,
+          42.8475
+        ]
+      },
+      "properties": {
+        "external_id": "club-06",
+        "nombre": "Glow Club Vitoria",
+        "categoria": "ocio",
+        "subcategoria": "club",
+        "descripcion": "Club nocturno y discoteca con sonido Funktion-One de alta fidelidad, espectáculos de luces LED y música comercial y urbana de vanguardia.",
+        "direccion": "Calle Florida, 37",
+        "imagen_url": "https://images.unsplash.com/photo-1545128485-c400e7702796?w=800&auto=format&fit=crop",
+        "web": null,
+        "telefono": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.6416,
+          42.8548
+        ]
+      },
+      "properties": {
+        "external_id": "nat-01",
+        "nombre": "Ataria - Centro de Interpretación de Salburua",
+        "categoria": "naturaleza",
+        "subcategoria": "centro_interpretacion",
+        "descripcion": "Emblemático edificio voladizo sobre la laguna que ofrece mirador ornitológico, exposiciones interactivas sobre la biodiversidad y alquiler de bicicletas.",
+        "direccion": "Paseo de la Biosfera, 4 (Salburua)",
+        "imagen_url": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&auto=format&fit=crop",
+        "web": "https://www.vitoria-gasteiz.org/ataria",
+        "telefono": "+34 945 16 26 16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.6455,
+          42.859
+        ]
+      },
+      "properties": {
+        "external_id": "nat-02",
+        "nombre": "Humedales de Salburua y Laguna de Betoño",
+        "categoria": "naturaleza",
+        "subcategoria": "humedal_ramsar",
+        "descripcion": "Humedal protegido de importancia internacional Ramsar, hogar del visón europeo, ciervos en libertad y cientos de aves acuáticas.",
+        "direccion": "Parque de Salburua",
+        "imagen_url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&auto=format&fit=crop",
+        "web": "https://www.vitoria-gasteiz.org/anilloverde",
+        "telefono": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.7025,
+          42.828
+        ]
+      },
+      "properties": {
+        "external_id": "nat-03",
+        "nombre": "Bosque de Armentia (Anillo Verde)",
+        "categoria": "naturaleza",
+        "subcategoria": "bosque",
+        "descripcion": "Masa forestal natural de quejigos y encinas que conecta la ciudad con los Montes de Vitoria, ideal para senderismo y paseos a caballo.",
+        "direccion": "Paseo del Bosque de Armentia",
+        "imagen_url": "https://images.unsplash.com/photo-1448375240586-882707db888b?w=800&auto=format&fit=crop",
+        "web": "https://www.vitoria-gasteiz.org/armentia",
+        "telefono": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.6635,
+          42.829
+        ]
+      },
+      "properties": {
+        "external_id": "nat-04",
+        "nombre": "Jardín Botánico de Olarizu",
+        "categoria": "naturaleza",
+        "subcategoria": "jardin_botanico",
+        "descripcion": "Espacio botánico de 125 hectáreas con bosquetes de los cinco continentes, banco de germoplasma y sendas interpretativas.",
+        "direccion": "Campo de las Campas de Olarizu",
+        "imagen_url": "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=800&auto=format&fit=crop",
+        "web": "https://www.vitoria-gasteiz.org/olarizu",
+        "telefono": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.711,
+          42.8435
+        ]
+      },
+      "properties": {
+        "external_id": "nat-05",
+        "nombre": "Parque de Zabalgana y Balsa",
+        "categoria": "naturaleza",
+        "subcategoria": "parque_natural",
+        "descripcion": "Parque periurbano recuperado de antiguas graveras con lagunas de agua dulce, praderas, quejigales y pasarelas de madera.",
+        "direccion": "Paseo de la Unesco (Zabalgana)",
+        "imagen_url": "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=800&auto=format&fit=crop",
+        "web": "https://www.vitoria-gasteiz.org/zabalgana",
+        "telefono": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.6775,
+          42.861
+        ]
+      },
+      "properties": {
+        "external_id": "nat-06",
+        "nombre": "Parque de San Juan de Arriaga",
+        "categoria": "naturaleza",
+        "subcategoria": "parque_urbano",
+        "descripcion": "El parque urbano más extenso de la ciudad (18 hectáreas) con estanque central, rosaleda, anfiteatro y la histórica ermita de San Juan de Arriaga.",
+        "direccion": "Calle Francisco Javier de Landaburu (Lakua)",
+        "imagen_url": "https://images.unsplash.com/photo-1496614441538-04e8023dd76a?w=800&auto=format&fit=crop",
+        "web": null,
+        "telefono": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.6985,
+          42.8305
+        ]
+      },
+      "properties": {
+        "external_id": "patr-01",
+        "nombre": "Basílica de San Prudencio de Armentia",
+        "categoria": "patrimonio",
+        "subcategoria": "basilica_romanica",
+        "descripcion": "Joya del románico alavés del siglo XII erigida sobre la cuna de San Prudencio, patrón de Álava, parada clave del Camino de Santiago interior.",
+        "direccion": "Plaza de San Prudencio (Armentia)",
+        "imagen_url": "https://images.unsplash.com/photo-1548625361-196f130b05b3?w=800&auto=format&fit=crop",
+        "web": "https://alavaturismo.eus",
+        "telefono": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.6605,
+          42.822
+        ]
+      },
+      "properties": {
+        "external_id": "patr-02",
+        "nombre": "Cerro y Cruz de Olarizu",
+        "categoria": "patrimonio",
+        "subcategoria": "mirador_panoramico",
+        "descripcion": "Cima coronada por la gran cruz de hormigón erigida en 1951, con vistas panorámicas 360 grados de toda la llanada de Vitoria y los montes circundantes.",
+        "direccion": "Cerro de Olarizu",
+        "imagen_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&auto=format&fit=crop",
+        "web": null,
+        "telefono": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.7055,
+          42.844
+        ]
+      },
+      "properties": {
+        "external_id": "patr-03",
+        "nombre": "Pasarela Peatonal de Zabalgana",
+        "categoria": "patrimonio",
+        "subcategoria": "arquitectura_moderna",
+        "descripcion": "Icono de la arquitectura contemporánea de Vitoria: puente atirantado de diseño orgánico que conecta el nuevo barrio con el parque.",
+        "direccion": "Avenida de Zabalgana",
+        "imagen_url": "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=800&auto=format&fit=crop",
+        "web": null,
+        "telefono": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.701,
+          42.831
+        ]
+      },
+      "properties": {
+        "external_id": "gastro-01",
+        "nombre": "Asador Armentegi",
+        "categoria": "gastronomia",
+        "subcategoria": "asador_vasco",
+        "descripcion": "Típico caserío asador en Armentia especializado en chuletón a la brasa de encina, pescados del Cantábrico y postres caseros.",
+        "direccion": "Camino de Armentia, 24",
+        "imagen_url": "https://images.unsplash.com/photo-1544025162-d76694265947?w=800&auto=format&fit=crop",
+        "web": "https://armentegi.es",
+        "telefono": "+34 945 14 30 76"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.709,
+          42.8415
+        ]
+      },
+      "properties": {
+        "external_id": "gastro-02",
+        "nombre": "Plaza Labastida (Gastro-Barrio Zabalgana)",
+        "categoria": "gastronomia",
+        "subcategoria": "cafeterias_y_terrazas",
+        "descripcion": "Animada plaza peatonal con terrazas, cervecerías de autor y locales de pintxos y raciones que congrega la vida social de Zabalgana.",
+        "direccion": "Plaza Labastida (Zabalgana)",
+        "imagen_url": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&auto=format&fit=crop",
+        "web": null,
+        "telefono": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.6685,
+          42.8615
+        ]
+      },
+      "properties": {
+        "external_id": "com-01",
+        "nombre": "Centro Comercial El Boulevard",
+        "categoria": "comercio",
+        "subcategoria": "centro_comercial",
+        "descripcion": "El mayor complejo comercial de Álava con más de 120 tiendas de moda, cines Yelmo, zona de restauración y ocio familiar.",
+        "direccion": "Calle Zaramaga, 1",
+        "imagen_url": "https://images.unsplash.com/photo-1519567241046-7f570eee3ce6?w=800&auto=format&fit=crop",
+        "web": "https://el-boulevard.com",
+        "telefono": "+34 945 26 77 44"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.6845,
+          42.8635
+        ]
+      },
+      "properties": {
+        "external_id": "com-02",
+        "nombre": "Centro Comercial Lakua",
+        "categoria": "comercio",
+        "subcategoria": "centro_comercial",
+        "descripcion": "Espacio comercial de proximidad en Lakua con hipermercado, galerías comerciales, gimnasio y zona infantil.",
+        "direccion": "Calle Duque de Wellington, 8 (Lakua)",
+        "imagen_url": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&auto=format&fit=crop",
+        "web": "https://cclakua.com",
+        "telefono": "+34 945 17 21 00"
       }
     }
   ]

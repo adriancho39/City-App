@@ -80,8 +80,27 @@ def clasificar_entidad(nombre: str, descripcion: str = "", tipo_origen: str = ""
             mejor_score = score
             mejor_cat = cat  # type: ignore
 
-    # Subcategoría descriptiva
-    subcat = tipo_origen.capitalize() if tipo_origen else mejor_cat.capitalize()
+    # Subcategoría descriptiva orientada a grupos de búsqueda
+    t_lower = texto.lower()
+    if any(w in t_lower for w in ['fronton', 'piscina', 'polideport', 'estadio', 'baskonia', 'alaves', 'atletismo', 'gimnas', 'bakh', 'cancha', 'deporte', 'kirol']):
+        subcat = 'deporte'
+        mejor_cat = 'ocio'
+    elif any(w in t_lower for w in ['ruta', 'senda', 'anillo verde', 'mural', 'vasco-navarro', 'itinerario', 'camino']):
+        subcat = 'ruta'
+    elif any(w in t_lower for w in ['club', 'discoteca', 'pub', 'sala de conciert', 'rock', 'helldorado', 'jimmy jazz']):
+        subcat = 'club'
+        mejor_cat = 'ocio'
+    elif any(w in t_lower for w in ['restaurante', 'asador', 'sidreria', 'taberna', 'pintxo', 'gastro']):
+        subcat = 'restaurante'
+        mejor_cat = 'gastronomia'
+    elif any(w in t_lower for w in ['parque', 'jardin', 'humedal', 'botanico', 'bosque']):
+        subcat = 'naturaleza'
+    elif any(w in t_lower for w in ['catedral', 'muralla', 'palacio', 'torre', 'monumento']):
+        subcat = 'monumento'
+        mejor_cat = 'patrimonio'
+    else:
+        subcat = tipo_origen.lower() if tipo_origen else mejor_cat
+
     return mejor_cat, subcat
 
 def similitud_lexica(texto_a: str, texto_b: str) -> float:
