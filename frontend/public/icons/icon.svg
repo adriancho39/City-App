@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="gasteizGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1b4332"/>
+      <stop offset="50%" stop-color="#2d6a4f"/>
+      <stop offset="100%" stop-color="#081c15"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  <!-- Background Rounded Shield -->
+  <rect width="512" height="512" rx="112" fill="url(#gasteizGrad)"/>
+  
+  <!-- Outer Ring (representing the Anillo Verde / Green Belt) -->
+  <circle cx="256" cy="256" r="200" fill="none" stroke="#52b788" stroke-width="12" opacity="0.35" stroke-dasharray="16 10"/>
+  <circle cx="256" cy="256" r="172" fill="none" stroke="#74c69d" stroke-width="6" opacity="0.5"/>
+
+  <!-- Iconic Vitoria Pin Marker -->
+  <g filter="url(#shadow)" transform="translate(0, -16)">
+    <!-- Map Pin Base -->
+    <path d="M256 96 C185 96 128 153 128 224 C128 320 256 424 256 424 C256 424 384 320 384 224 C384 153 327 96 256 96 Z" fill="url(#goldGrad)"/>
+    <!-- Inner Pin Core -->
+    <circle cx="256" cy="224" r="76" fill="#1b4332"/>
+    
+    <!-- Cathedral & Green Leaf Symbol -->
+    <!-- Cathedral Tower -->
+    <path d="M256 168 L244 196 L248 196 L248 248 L264 248 L264 196 L268 196 Z" fill="#ffffff"/>
+    <polygon points="256,152 251,168 261,168" fill="#fbbf24"/>
+    
+    <!-- Stylized Leaf (Green Capital) -->
+    <path d="M256 220 C274 210 292 222 294 238 C280 248 262 238 256 220 Z" fill="#52b788"/>
+  </g>
+  
+  <!-- Small Star Badge -->
+  <circle cx="256" cy="460" r="10" fill="#fbbf24"/>
+</svg>

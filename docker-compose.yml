@@ -1,0 +1,36 @@
+services:
+  postgis:
+    image: postgis/postgis:16-3.4
+    container_name: vitoria_postgis
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: vitoria_turismo
+      POSTGRES_USER: vitoria_user
+      POSTGRES_PASSWORD: vitoria_password
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgis_data:/var/lib/postgresql/data
+      - ./database/01_init_postgis.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U vitoria_user -d vitoria_turismo"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: vitoria_api
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=postgresql://vitoria_user:vitoria_password@postgis:5432/vitoria_turismo
+    depends_on:
+      postgis:
+        condition: service_healthy
+
+volumes:
+  postgis_data:

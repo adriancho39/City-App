@@ -1,0 +1,337 @@
+{
+  "type": "FeatureCollection",
+  "name": "seed_vitoria",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-2.6726, 42.8497] },
+      "properties": {
+        "external_id": "seed-01",
+        "nombre": "Catedral de Santa María (Catedral Vieja)",
+        "categoria": "patrimonio",
+        "subcategoria": "Catedral Gótica",
+        "descripcion": "Templo gótico del siglo XIII conocido por el lema 'Abierto por Obras' e inmortalizado por Ken Follett.",
+        "direccion": "Plaza de Santa María, 3",
+        "imagen_url": "https://images.unsplash.com/photo-1548625361-196f130b05b3?w=800&auto=format&fit=crop",
+        "web": "https://catedralvitoria.eus",
+        "telefono": "+34 945 25 51 35"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-2.6715, 42.8501] },
+      "properties": {
+        "external_id": "seed-02",
+        "nombre": "Muralla Medieval y Torreones",
+        "categoria": "patrimonio",
+        "subcategoria": "Muralla Histórica",
+        "descripcion": "Muralla defensiva del siglo XI recuperada con adarve ajardinado y mirador sobre la llanada alavesa.",
+        "direccion": "Cantón de las Carnicerías, s/n",
+        "imagen_url": "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=800&auto=format&fit=crop",
+        "web": "https://www.vitoria-gasteiz.org/turismo"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-2.6716, 42.8467] },
+      "properties": {
+        "external_id": "seed-03",
+        "nombre": "Plaza de la Virgen Blanca",
+        "categoria": "patrimonio",
+        "subcategoria": "Plaza Emblemática",
+        "descripcion": "Plaza central y corazón de la ciudad, presidida por el monumento a la Batalla de Vitoria y la escultura vegetal.",
+        "direccion": "Plaza de la Virgen Blanca, s/n",
+        "imagen_url": "https://images.unsplash.com/photo-1574958269340-fa927503f3dd?w=800&auto=format&fit=crop"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-2.6738, 42.8475] },
+      "properties": {
+        "external_id": "seed-04",
+        "nombre": "Palacio de Montehermoso",
+        "categoria": "patrimonio",
+        "subcategoria": "Palacio Renacentista",
+        "descripcion": "Palacio renacentista del siglo XVI, residencia temporal de José Bonaparte, hoy centro cultural multidisciplinar.",
+        "direccion": "Calle Fray Zacarías Martínez, 2",
+        "imagen_url": "https://images.unsplash.com/photo-1599818987483-363d661e7a5c?w=800&auto=format&fit=crop"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-2.6718, 42.8480] },
+      "properties": {
+        "external_id": "seed-05",
+        "nombre": "Palacio Villa Suso y Plaza del Machete",
+        "categoria": "patrimonio",
+        "subcategoria": "Palacio Histórico",
+        "descripcion": "Espacio medieval donde juraban los procuradores sobre el machete de la ciudad. Sala de exposiciones y congresos.",
+        "direccion": "Plaza del Machete, 1",
+        "imagen_url": "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=800&auto=format&fit=crop"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-2.6710, 42.8472] },
+      "properties": {
+        "external_id": "seed-06",
+        "nombre": "Los Arquillos de Olaguíbel",
+        "categoria": "patrimonio",
+        "subcategoria": "Conjunto Monumental",
+        "descripcion": "Obra neoclásica del siglo XVIII que resuelve el desnivel entre la almendra medieval y el ensanche.",
+        "direccion": "Paseo de los Arquillos, s/n",
+        "imagen_url": "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=800&auto=format&fit=crop"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-2.6717, 42.8485] },
+      "properties": {
+        "external_id": "seed-07",
+        "nombre": "Casa del Cordón",
+        "categoria": "patrimonio",
+        "subcategoria": "Palacio Gótico",
+        "descripcion": "Edificio bajomedieval del siglo XV con cordón franciscano en la fachada y bóveda gótica de madera.",
+        "direccion": "Calle Cuchillería, 24",
+        "imagen_url": "https://images.unsplash.com/photo-1548625361-196f130b05b3?w=800&auto=format&fit=crop"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-2.6728, 42.8491] },
+      "properties": {
+        "external_id": "seed-08",
+        "nombre": "Palacio Escoriaza-Esquivel",
+        "categoria": "patrimonio",
+        "subcategoria": "Palacio Renacentista Plateresco",
+        "descripcion": "El palacio renacentista mejor conservado de la ciudad, mandado construir por el médico de Enrique VIII.",
+        "direccion": "Calle Fray Zacarías Martínez, 5",
+        "imagen_url": "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=800&auto=format&fit=crop"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-2.6450, 42.8550] },
+      "properties": {
+        "external_id": "seed-09",
+        "nombre": "Humedales de Salburua y Centro Ataria",
+        "categoria": "naturaleza",
+        "subcategoria": "Anillo Verde - Humedal Ramsar",
+        "descripcion": "Espacio natural protegido con lagunas, observatorios de aves acuáticas, visones europeos y centro Ataria.",
+        "direccion": "Paseo de la Biosfera, 4",
+        "imagen_url": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&auto=format&fit=crop",
+        "web": "https://ataria.vitoria-gasteiz.org"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-2.6735, 42.8450] },
+      "properties": {
+        "external_id": "seed-10",
+        "nombre": "Parque de La Florida",
+        "categoria": "naturaleza",
+        "subcategoria": "Parque Botánico Histórico",
+        "descripcion": "Jardín botánico romántico de estilo francés fundado en 1820 con secuoyas, sauces llorones y quiosco de música.",
+        "direccion": "Paseo de la Florida, s/n",
+        "imagen_url": "https://images.unsplash.com/photo-1448375240586-882707db888b?w=800&auto=format&fit=crop"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-2.6620, 42.8270] },
+      "properties": {
+        "external_id": "seed-11",
+        "nombre": "Jardín Botánico de Olarizu",
+        "categoria": "naturaleza",
+        "subcategoria": "Anillo Verde - Jardín Botánico",
+        "descripcion": "Colección de bosques de Europa, dehesa tradicional, banco de germoplasma y cerro con vistas panorámicas.",
+        "direccion": "Campo de Olarizu, s/n",
+        "imagen_url": "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&auto=format&fit=crop"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-2.7010, 42.8330] },
+      "properties": {
+        "external_id": "seed-12",
+        "nombre": "Bosque de Armentia",
+        "categoria": "naturaleza",
+        "subcategoria": "Anillo Verde - Bosque Autóctono",
+        "descripcion": "Extenso quejigal natural con senderos para bicicletas y caminantes, enlazando la ciudad con los Montes de Vitoria.",
+        "direccion": "Paseo de Armentia, s/n",
+        "imagen_url": "https://images.unsplash.com/photo-1448375240586-882707db888b?w=800&auto=format&fit=crop"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-2.6795, 42.8410] },
+      "properties": {
+        "external_id": "seed-13",
+        "nombre": "Parque del Prado",
+        "categoria": "naturaleza",
+        "subcategoria": "Parque Urbano",
+        "descripcion": "Parque histórico junto a la Basílica de San Prudencio y Ajuria Enea, predilecto para corredores y paseos.",
+        "direccion": "Paseo Fray Francisco de Vitoria, s/n",
+        "imagen_url": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&auto=format&fit=crop"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-2.6675, 42.8475] },
+      "properties": {
+        "external_id": "seed-14",
+        "nombre": "Artium - Museo Vasco de Arte Contemporáneo",
+        "categoria": "cultura",
+        "subcategoria": "Museo de Arte",
+        "descripcion": "Centro de referencia internacional en arte vasco y español contemporáneo con obras de Oteiza, Chillida y Barceló.",
+        "direccion": "Calle Francia, 24",
+        "imagen_url": "https://images.unsplash.com/photo-1565008447742-97f6f38c985c?w=800&auto=format&fit=crop",
+        "web": "https://artium.eus",
+        "telefono": "+34 945 20 90 20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-2.6705, 42.8493] },
+      "properties": {
+        "external_id": "seed-15",
+        "nombre": "Bibat: Museo de Arqueología y Naipes Fournier",
+        "categoria": "cultura",
+        "subcategoria": "Museo Histórico",
+        "descripcion": "Complejo museístico en el Palacio Bendaña que alberga la colección de naipes Fournier más extensa del mundo.",
+        "direccion": "Calle Cuchillería, 54",
+        "imagen_url": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=800&auto=format&fit=crop",
+        "web": "https://www.araba.eus"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-2.6798, 42.8415] },
+      "properties": {
+        "external_id": "seed-16",
+        "nombre": "Museo de Bellas Artes de Álava",
+        "categoria": "cultura",
+        "subcategoria": "Museo de Bellas Artes",
+        "descripcion": "Palacete ecléctico Augustin-Zulueta con valiosas pinturas y esculturas del arte vasco de los siglos XVIII al XX.",
+        "direccion": "Paseo Fray Francisco, 8",
+        "imagen_url": "https://images.unsplash.com/photo-1579783902614-a3fb3927b675?w=800&auto=format&fit=crop"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-2.6706, 42.8465] },
+      "properties": {
+        "external_id": "seed-17",
+        "nombre": "Teatro Principal Antzokia",
+        "categoria": "cultura",
+        "subcategoria": "Teatro y Espectáculos",
+        "descripcion": "Teatro histórico a la italiana inaugurado en 1918, corazón escénico de los festivales y conciertos de la ciudad.",
+        "direccion": "Calle San Prudencio, 29",
+        "imagen_url": "https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?w=800&auto=format&fit=crop",
+        "web": "https://www.vitoria-gasteiz.org/teatros"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-2.6712, 42.8488] },
+      "properties": {
+        "external_id": "seed-18",
+        "nombre": "Ruta de Pintxos de la Almendra Medieval (Kutxi y Zapa)",
+        "categoria": "gastronomia",
+        "subcategoria": "Ruta de Pintxos",
+        "descripcion": "Emblemática senda de bares en el casco histórico repleta de barras con creaciones culinarias y vinos de Rioja Alavesa.",
+        "direccion": "Calle Cuchillería y Calle Zapatería",
+        "imagen_url": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&auto=format&fit=crop"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-2.6690, 42.8460] },
+      "properties": {
+        "external_id": "seed-19",
+        "nombre": "Mercado de Abastos y Gastro-Gune",
+        "categoria": "gastronomia",
+        "subcategoria": "Mercado Gastronómico",
+        "descripcion": "Mercado tradicional de productos kilómetro cero de productores alaveses, con gastrobares en su terraza superior.",
+        "direccion": "Calle Jesús Guridi, 1",
+        "imagen_url": "https://images.unsplash.com/photo-1533900298318-6b8da08a523e?w=800&auto=format&fit=crop"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-2.6730, 42.8502] },
+      "properties": {
+        "external_id": "seed-20",
+        "nombre": "Restaurante El Portalón",
+        "categoria": "gastronomia",
+        "subcategoria": "Restaurante Histórico",
+        "descripcion": "Mesón gótico del siglo XV con historia viva en la parte alta de la colina, célebre por su alta gastronomía vasco-alavesa.",
+        "direccion": "Calle Correría, 151",
+        "imagen_url": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&auto=format&fit=crop",
+        "web": "https://restauranteelportalon.com",
+        "telefono": "+34 945 14 27 55"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-2.6728, 42.8460] },
+      "properties": {
+        "external_id": "seed-21",
+        "nombre": "Sagartoki (Bar de Pintxos de Autor)",
+        "categoria": "gastronomia",
+        "subcategoria": "Gastrobar Premiado",
+        "descripcion": "Gastrobar premiado nacionalmente por sus tortillas de patata premiadas y cocina en miniatura vanguardista.",
+        "direccion": "Calle Prado, 18",
+        "imagen_url": "https://images.unsplash.com/photo-1544025162-d76694265947?w=800&auto=format&fit=crop",
+        "web": "https://sagartoki.com",
+        "telefono": "+34 945 28 86 76"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-2.6788, 42.8445] },
+      "properties": {
+        "external_id": "seed-22",
+        "nombre": "Restaurante Zaldiaran",
+        "categoria": "gastronomia",
+        "subcategoria": "Alta Cocina Alavesa",
+        "descripcion": "Restaurante de referencia en cocina vasca de vanguardia, templo de la trufa negra y pionero culinario alavés.",
+        "direccion": "Avenida de Gasteiz, 21",
+        "imagen_url": "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?w=800&auto=format&fit=crop",
+        "web": "https://restaurantezaldiaran.com"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-2.6828, 42.8512] },
+      "properties": {
+        "external_id": "seed-23",
+        "nombre": "Palacio de Congresos Europa",
+        "categoria": "ocio",
+        "subcategoria": "Centro de Ocio y Congresos",
+        "descripcion": "Edificio sostenible con fachada vegetal pionera de 1.500 m2 con especies autóctonas alavesas.",
+        "direccion": "Avenida de Gasteiz, 85",
+        "imagen_url": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&auto=format&fit=crop"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-2.6700, 42.8455] },
+      "properties": {
+        "external_id": "seed-24",
+        "nombre": "Eje Comercial Calle Dato y San Prudencio",
+        "categoria": "comercio",
+        "subcategoria": "Comercio Local y Tradicional",
+        "descripcion": "Arteria peatonal principal del ensanche con comercios emblemáticos, confiterías artesanales y terrazas.",
+        "direccion": "Calle Eduardo Dato",
+        "imagen_url": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&auto=format&fit=crop"
+      }
+    }
+  ]
+}
